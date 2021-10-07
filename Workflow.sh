@@ -79,6 +79,43 @@ chmod 755 ls_align_sam.txt
 
 
 ###I am here 
+#Convert sam file to bam file
+
+samtools view -bS A8_sensitive.sam > A8_sensitive.bam
+samtools view -bS A9_sensitive.sam > A9_sensitive.bam
+samtools view -bS A10_sensitive.sam > A10_sensitive.bam
+samtools view -bS A11_sensitive.sam > A11_sensitive.bam
+
+samtools view -bS A12_resistant.sam > A12_resistant.bam
+samtools view -bS A13_resistant.sam > A13_resistant.bam
+samtools view -bS A14_resistant.sam > A14_resistant.bam
+samtools view -bS A15_resistant.sam > A15_resistant.bam
+
+##sort bam file and output 
+
+samtools sort A8_sensitive.bam -o A8_sensitive_sorted.bam
+samtools sort A9_sensitive.bam -o A9_sensitive_sorted.bam
+samtools sort A10_sensitive.bam -o A10_sensitive_sorted.bam
+samtools sort A11_sensitive.bam -o A11_sensitive_sorted.bam
+
+samtools sort A12_resistant.bam -o A12_resistant_sorted.bam
+samtools sort A13_resistant.bam -o A13_resistant_sorted.bam
+samtools sort A14_resistant.bam -o A14_resistant_sorted.bam
+samtools sort A15_resistant.bam -o A15_resistant_sorted.bam
+
+#feature count
+
+featureCounts -T 24 -t exon -g gene_id -O -a Lepeophtheirus_salmonis.LSalAtl2s.51.gff3.gz.sorted.gz
+ -o count-table.txt A8_sensitive_sorted.bam A9_sensitive_sorted.bam A10_sensitive_sorted.bam A11_sensitive_sorted.bam A12_resistant_sorted.bam A13_resistant_sorted.bam A14_resistant_sorted.bam A15_resistant_sorted.bam
+
+#format feature count table
+cp /local/work/biocore/mol8008/RNA/fcnts2dseq.py .
+python fcnts2dseq.py count-table.txt
+
+#find differential expression using voom script
+cp /local/work/biocore/mol8008/RNA/Voom_script.r .
+Rscript --vanilla Voom_script.r
+
 
 
 
