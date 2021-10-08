@@ -1,0 +1,62 @@
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file Lepeophtheirus_salmonis.LSalAtl2s.51.gff3.gz.sort ... ||
+||    Features : 59207                                                        ||
+||    Meta-features : 13501                                                   ||
+||    Chromosomes/contigs : 2178                                              ||
+||                                                                            ||
+|| Process BAM file A8_sensitive_sorted.bam...                                ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 46721417                                             ||
+||    Successfully assigned alignments : 36515324 (78.2%)                     ||
+||    Running time : 0.16 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A9_sensitive_sorted.bam...                                ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 45305371                                             ||
+||    Successfully assigned alignments : 35103287 (77.5%)                     ||
+||    Running time : 0.15 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A10_sensitive_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 47745061                                             ||
+||    Successfully assigned alignments : 37518644 (78.6%)                     ||
+||    Running time : 0.19 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A11_sensitive_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 46940683                                             ||
+||    Successfully assigned alignments : 36698910 (78.2%)                     ||
+||    Running time : 0.21 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A12_resistant_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 59312803                                             ||
+||    Successfully assigned alignments : 37753128 (63.7%)                     ||
+||    Running time : 0.32 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A13_resistant_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 49887757                                             ||
+||    Successfully assigned alignments : 39492177 (79.2%)                     ||
+||    Running time : 0.23 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A14_resistant_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 44639106                                             ||
+||    Successfully assigned alignments : 35145322 (78.7%)                     ||
+||    Running time : 0.21 minutes                                             ||
+||                                                                            ||
+|| Process BAM file A15_resistant_sorted.bam...                               ||
+||    WARNING: Paired-end reads were found.                                   ||
+||    Total alignments : 47119453                                             ||
+||    Successfully assigned alignments : 37149449 (78.8%)                     ||
+||    Running time : 0.20 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "count-table.txt.summary  ||
+|| "                                                                          ||
+||                                                                            ||
+\\============================================================================//
