@@ -66,6 +66,7 @@ hisat2 -p 24 --dta -x salmonlice_ind -1 /local/work/biocore/mol8008/mol8008_11/s
 
 hisat2 -p 24 --dta -x salmonlice_ind -1 /local/work/biocore/mol8008/mol8008_11/salmonlice/fastq_sra/A14_1.fastq.gz -2 /local/work/biocore/mol8008/mol8008_11/salmonlice/fastq_sra/A14_2.fastq.gz -S A14_resistant.sam 2>summary14.txt
 
+hisat2 -p 24 --dta -x salmonlice_ind -1 /local/work/biocore/mol8008/mol8008_11/salmonlice/fastq_sra/A15_1.fastq.gz -2 /local/work/biocore/mol8008/mol8008_11/salmonlice/fastq_sra/A15_2.fastq.gz -S A15_resistant.sam 2>summary15.txt
 
 #make the txt file executable by 
 
@@ -105,8 +106,7 @@ samtools sort A15_resistant.bam -o A15_resistant_sorted.bam
 
 #feature count
 
-featureCounts -T 24 -t exon -g gene_id -O -a Lepeophtheirus_salmonis.LSalAtl2s.51.gff3.gz.sorted.gz
- -o count-table.txt A8_sensitive_sorted.bam A9_sensitive_sorted.bam A10_sensitive_sorted.bam A11_sensitive_sorted.bam A12_resistant_sorted.bam A13_resistant_sorted.bam A14_resistant_sorted.bam A15_resistant_sorted.bam
+featureCounts -T 24 -t exon -F GFF3 -g Parent -O -a Lepeophtheirus_salmonis.LSalAtl2s.51.gff3.gz.sorted.gz -o count-table.txt A8_sensitive_sorted.bam A9_sensitive_sorted.bam A10_sensitive_sorted.bam A11_sensitive_sorted.bam A12_resistant_sorted.bam A13_resistant_sorted.bam A14_resistant_sorted.bam A15_resistant_sorted.bam
 
 #format feature count table
 cp /local/work/biocore/mol8008/RNA/fcnts2dseq.py .
