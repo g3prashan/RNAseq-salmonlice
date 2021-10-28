@@ -114,7 +114,13 @@ python fcnts2dseq.py count-table.txt
 
 #find differential expression using voom script
 cp /local/work/biocore/mol8008/RNA/Voom_script.r .
+
+#using Voom limma 
 Rscript --vanilla Voom_script.r
+
+#using EdgeR-GLM method
+Rscript --vanilla EdgeR_GLM-salmonlice.r
+
 
 
 
